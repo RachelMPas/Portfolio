@@ -1,0 +1,144 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte moderna e profissional */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Contêiner principal flexível */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Menu lateral com espaçamento da esquerda */
+.sidebar {
+    width: 250px;
+    background-color: rgba(51, 51, 51, 0.8); /* Reduzindo a opacidade */
+    padding: 20px;
+    color: white;
+    margin-left: 50px; /* Espaçamento da esquerda */
+}
+
+
+/* Estilo do título no menu */
+.sidebar h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo da navegação */
+.sidebar nav ul {
+    list-style-type: none;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #444;
+}
+
+/* Conteúdo principal */
+.content {
+    flex: 1;
+    padding: 40px;
+    background-color: white;
+}
+
+/* Esconder as seções inicialmente */
+section {
+    display: none;
+}
+
+/* Tornar a seção visível quando ativa */
+section.active {
+    display: block;
+}
+
+/* Título das seções */
+h2 {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+/* Texto */
+p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Estilo específico para a seção da biografia */
+.bio-content {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: flex-start; /* Alinha o conteúdo ao início da coluna */
+}
+
+.bio-content img {
+    width: 150px; /* Largura ajustada */
+    height: 200px; /* Altura menor para o retângulo */
+    border-radius: 10px; /* Bordas arredondadas suaves */
+    margin-bottom: -40px; /* Coloca o texto sobrepondo a imagem */
+    object-fit: cover; /* Ajusta a imagem para preencher o retângulo */
+}
+
+.bio-content p {
+    margin-left: 160px; /* Move o texto para a direita da imagem */
+    margin-top: -100px; /* Ajusta para subir o texto, quase sobrepondo a imagem */
+    line-height: 1.6; /* Melhor espaçamento entre as linhas */
+    font-size: 1.1em;
+    color: #666;
+}
+
+.menu-title {
+    color: white; /* Altera a cor do título para branco */
+    font-size: 1.8em; /* Ajuste do tamanho do título, opcional */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    text-align: center; /* Centraliza o título */
+}
+
+
+.submenu.show {
+    display: block; /* Mostra o submenu quando a classe 'show' é adicionada */
+}
+.submenu {
+    font-size: 0.9em; /* Tamanho da fonte menor */
+    margin-top: 10px; /* Espaço acima da lista */
+    margin-left: 20px; /* Recuo à esquerda */
+    color: #666; /* Cor do texto para uma melhor visibilidade */
+}
+
+.submenu li {
+    list-style-type: disc; /* Estilo da lista */
+    margin-left: 20px; /* Espaço à esquerda */
+}
+.hidden {
+    display: none; /* Esconde as subseções inicialmente */
+}
+
+.active {
+    display: block; /* Mostra a seção ativa */
+}
+
